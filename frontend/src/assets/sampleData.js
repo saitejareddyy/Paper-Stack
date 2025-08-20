@@ -1,0 +1,207 @@
+export const subjectsData = [
+  // ================== CSE ==================
+  {
+    id: 1,
+    name: "Data Structures",
+    branch: "CSE",
+    image: "https://tse1.mm.bing.net/th/id/OIP.eiqy11RfyotD5dn3bEOQsgHaEk?pid=Api&P=0&h=180",
+    description: "Covers data organization, storage, and retrieval methods for efficient computing.",
+    topics: ["Arrays", "Linked Lists", "Stacks", "Queues", "Trees", "Graphs"],
+    prerequisites: ["Programming Fundamentals"],
+    semester: 3,
+    credits: 4,
+    faculty: { name: "Dr. Ananya Sharma", email: "ananya.sharma@university.edu", office: "Room 204, CS Block" },
+    resources: [{ type: "Textbook", title: "Data Structures in C++", author: "Adam Drozdek", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+  {
+    id: 2,
+    name: "Algorithms",
+    branch: "CSE",
+    image: "https://tse2.mm.bing.net/th/id/OIP.mm3Z6ZZRNNc7dXY4ALLXGwHaE8?pid=Api&P=0&h=180",
+    description: "Focuses on designing and analyzing efficient algorithms.",
+    topics: ["Complexity Analysis", "Divide and Conquer", "Greedy", "Dynamic Programming", "Graph Algorithms"],
+    prerequisites: ["Data Structures"],
+    semester: 4,
+    credits: 4,
+    faculty: { name: "Prof. Rajesh Kumar", email: "rajesh.kumar@university.edu", office: "Room 305, CS Block" },
+    resources: [{ type: "Textbook", title: "Introduction to Algorithms", author: "Cormen et al.", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+  {
+    id: 3,
+    name: "Computer Networks",
+    branch: "CSE",
+    image: "https://tse3.mm.bing.net/th/id/OIP.ckLj8QNRM42EzMUMil2PnQHaEF?pid=Api&P=0&h=180",
+    description: "Covers network models, protocols, and communication technologies.",
+    topics: ["OSI Model", "TCP/IP", "Routing", "Switching", "DNS", "HTTP/HTTPS"],
+    prerequisites: ["Operating Systems"],
+    semester: 5,
+    credits: 3,
+    faculty: { name: "Dr. Meena Iyer", email: "meena.iyer@university.edu", office: "Room 108, CS Block" },
+    resources: [{ type: "Textbook", title: "Computer Networking: A Top-Down Approach", author: "Kurose & Ross", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+  {
+    id: 4,
+    name: "DBMS",
+    branch: "CSE",
+    image: "https://tse3.mm.bing.net/th/id/OIP.6jWjxC7B5Wt_heQaj_IsAAHaGb?pid=Api&P=0&h=180",
+    description: "Covers relational databases, SQL, and transaction management.",
+    topics: ["ER Models", "Relational Algebra", "SQL", "Normalization", "Transactions"],
+    prerequisites: ["Data Structures"],
+    semester: 5,
+    credits: 4,
+    faculty: { name: "Prof. Sunil Reddy", email: "sunil.reddy@university.edu", office: "Room 202, CS Block" },
+    resources: [{ type: "Textbook", title: "Database System Concepts", author: "Silberschatz et al.", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+  {
+    id: 5,
+    name: "Artificial Intelligence",
+    branch: "CSE",
+    image: "https://tse3.mm.bing.net/th/id/OIP.988mXibYAUFNPOmFc1BZCAHaE8?pid=Api&P=0&h=180",
+    description: "Introduction to AI, search strategies, knowledge representation, and ML basics.",
+    topics: ["Search Algorithms", "Knowledge Representation", "Machine Learning Basics", "Neural Networks"],
+    prerequisites: ["Algorithms"],
+    semester: 6,
+    credits: 3,
+    faculty: { name: "Dr. Kavita Gupta", email: "kavita.gupta@university.edu", office: "Room 210, CS Block" },
+    resources: [{ type: "Textbook", title: "Artificial Intelligence: A Modern Approach", author: "Russell & Norvig", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+
+  // ================== ECE ==================
+  {
+    id: 6,
+    name: "Digital Electronics",
+    branch: "ECE",
+    image: "https://tse4.mm.bing.net/th/id/OIP.N2UY5UEGNTgqost6MXfagQHaEO?pid=Api&P=0&h=180",
+    description: "Introduction to logic gates, combinational & sequential circuits.",
+    topics: ["Boolean Algebra", "K-Maps", "Flip-Flops", "Counters", "Registers"],
+    prerequisites: ["Basic Electronics"],
+    semester: 3,
+    credits: 3,
+    faculty: { name: "Dr. Manoj Verma", email: "manoj.verma@university.edu", office: "Room 112, ECE Block" },
+    resources: [{ type: "Textbook", title: "Digital Design", author: "Morris Mano", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+  {
+    id: 7,
+    name: "Communication Systems",
+    branch: "ECE",
+    image: "https://tse4.mm.bing.net/th/id/OIP.gfw19D9VNEsBmHWZ8lcTtAHaEL?pid=Api&P=0&h=180",
+    description: "Covers analog and digital communication techniques.",
+    topics: ["AM/FM", "Modulation", "Sampling", "Pulse Modulation", "Digital Communication"],
+    prerequisites: ["Signals & Systems"],
+    semester: 4,
+    credits: 4,
+    faculty: { name: "Prof. Ritu Malhotra", email: "ritu.malhotra@university.edu", office: "Room 220, ECE Block" },
+    resources: [{ type: "Textbook", title: "Communication Systems", author: "Simon Haykin", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+  {
+    id: 8,
+    name: "Microprocessors",
+    branch: "ECE",
+    image: "https://tse2.mm.bing.net/th/id/OIP.pGC7Xfsjz0BP3_WXvAuLhwHaEU?pid=Api&P=0&h=180",
+    description: "Focus on 8085/8086 architectures, assembly programming, and interfacing.",
+    topics: ["8085 Architecture", "Assembly Language", "Interfacing", "Interrupts"],
+    prerequisites: ["Digital Electronics"],
+    semester: 5,
+    credits: 4,
+    faculty: { name: "Dr. Amitabh Joshi", email: "amitabh.joshi@university.edu", office: "Room 118, ECE Block" },
+    resources: [{ type: "Textbook", title: "Microprocessor Architecture", author: "Ramesh Gaonkar", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+
+  // ================== EEE ==================
+  {
+    id: 9,
+    name: "Power Systems",
+    branch: "EEE",
+    image: "https://tse2.mm.bing.net/th/id/OIP.upaDOGkS3qtVD8WOHMldMwHaFC?pid=Api&P=0&h=180",
+    description: "Study of generation, transmission, and distribution of electrical power.",
+    topics: ["Generation Systems", "Transmission Lines", "Distribution Networks", "Fault Analysis"],
+    prerequisites: ["Circuit Theory"],
+    semester: 4,
+    credits: 4,
+    faculty: { name: "Prof. Pooja Menon", email: "pooja.menon@university.edu", office: "Room 205, EEE Block" },
+    resources: [{ type: "Textbook", title: "Power System Analysis", author: "Grainger & Stevenson", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+  {
+    id: 10,
+    name: "Control Systems",
+    branch: "EEE",
+    image: "https://tse2.mm.bing.net/th/id/OIP.yRn70IA3IeU_ce6rYoQXbwHaD9?pid=Api&P=0&h=180",
+    description: "Covers feedback systems, stability, and frequency response analysis.",
+    topics: ["Transfer Functions", "Block Diagrams", "Stability", "Bode Plots", "PID Controllers"],
+    prerequisites: ["Differential Equations"],
+    semester: 5,
+    credits: 4,
+    faculty: { name: "Dr. Suresh Rao", email: "suresh.rao@university.edu", office: "Room 210, EEE Block" },
+    resources: [{ type: "Textbook", title: "Modern Control Engineering", author: "Ogata", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+
+  // ================== MECH ==================
+  {
+    id: 11,
+    name: "Thermodynamics",
+    branch: "MECH",
+    image: "https://tse1.mm.bing.net/th/id/OIP.kFtBZydp0EeDepLlQj1RTwAAAA?pid=Api&P=0&h=180",
+    description: "Introduction to thermodynamic laws, properties, and cycles.",
+    topics: ["First Law", "Second Law", "Entropy", "Power Cycles"],
+    prerequisites: ["Engineering Physics"],
+    semester: 3,
+    credits: 4,
+    faculty: { name: "Dr. Vivek Patil", email: "vivek.patil@university.edu", office: "Room 120, MECH Block" },
+    resources: [{ type: "Textbook", title: "Fundamentals of Thermodynamics", author: "Moran & Shapiro", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+  {
+    id: 12,
+    name: "Machine Design",
+    branch: "MECH",
+    image: "https://tse1.mm.bing.net/th/id/OIP.MgNUQmRCV9iu08JB5r6_BAHaE8?pid=Api&P=0&h=180",
+    description: "Design principles of machine components and safety considerations.",
+    topics: ["Stress Analysis", "Shafts", "Gears", "Bearings"],
+    prerequisites: ["Strength of Materials"],
+    semester: 5,
+    credits: 4,
+    faculty: { name: "Prof. Prakash Yadav", email: "prakash.yadav@university.edu", office: "Room 207, MECH Block" },
+    resources: [{ type: "Textbook", title: "Design of Machine Elements", author: "V.B. Bhandari", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+
+  // ================== CIVIL ==================
+  {
+    id: 13,
+    name: "Structural Engineering",
+    branch: "CIVIL",
+    image: "https://tse4.mm.bing.net/th/id/OIP.Pa67TZfavsBQudW3ppseKwHaEK?pid=Api&P=0&h=180",
+    description: "Study of structures, loads, and material behavior.",
+    topics: ["Beams", "Trusses", "Frames", "Load Calculations"],
+    prerequisites: ["Mechanics of Materials"],
+    semester: 4,
+    credits: 4,
+    faculty: { name: "Dr. Neha Singh", email: "neha.singh@university.edu", office: "Room 110, CIVIL Block" },
+    resources: [{ type: "Textbook", title: "Structural Analysis", author: "R.C. Hibbeler", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  },
+  {
+    id: 14,
+    name: "Surveying",
+    branch: "CIVIL",
+    image: "https://tse4.mm.bing.net/th/id/OIP.iK6cK39ShrVt3WTOvf7nVQHaEK?pid=Api&P=0&h=180",
+    description: "Covers land surveying, leveling, and modern surveying instruments.",
+    topics: ["Chain Surveying", "Leveling", "Theodolite", "GPS Surveying"],
+    prerequisites: ["Engineering Graphics"],
+    semester: 3,
+    credits: 3,
+    faculty: { name: "Dr. Neha Singh", email: "neha.singh@university.edu", office: "Room 110, CIVIL Block" },
+    resources: [{ type: "Textbook", title: "Surveying", author: "B.C. Punmia", link: "#" }],
+    previousYearPapers: [{ questions: "questions.pdf", answers: "answers.pdf" }]
+  }
+];
