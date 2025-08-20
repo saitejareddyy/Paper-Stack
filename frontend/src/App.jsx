@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import { useSubject } from './context/SubjectContext'
 import { Toaster } from 'react-hot-toast'
-export const backendUrl = "http://localhost:5050"
+export const backendUrl = "https://paper-stack-backend.onrender.com"
 
 function App() {
 
