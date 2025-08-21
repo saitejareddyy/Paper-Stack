@@ -18,9 +18,21 @@ connectCloudinary();
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cookieParser())
+
+const allowedOrigins = [
+  "https://paper-stack-frontend.onrender.com",
+  "https://paper-stack-admin.onrender.com"
+]
+
 app.use(cors({
-  origin:  
-    "https://paper-stack-frontend.onrender.com" || "https://paper-stack-admin.onrender.com",  // your React frontend URL
+  origin: function(origin, callback) {
+    if(!origin || allowedOrigins.includes(origin){
+      callback(null, true)
+    }
+    else{
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,                // allow cookies (important!)
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
@@ -33,6 +45,7 @@ app.listen(PORT, () => {
   console.log(`Server running on port http://localhost:${PORT}`);
   dbConnection();
 })
+
 
 
 
