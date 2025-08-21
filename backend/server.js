@@ -25,11 +25,10 @@ const allowedOrigins = [
 ]
 
 app.use(cors({
-  origin: function(origin, callback) {
-    if(!origin || allowedOrigins.includes(origin){
-      callback(null, true)
-    }
-    else{
+ origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
       callback(new Error("Not allowed by CORS"));
     }
   },
@@ -45,6 +44,7 @@ app.listen(PORT, () => {
   console.log(`Server running on port http://localhost:${PORT}`);
   dbConnection();
 })
+
 
 
 
