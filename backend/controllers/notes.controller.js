@@ -55,6 +55,7 @@ export const getNotesData = async (req, res) => {
       isLiked: note.likes.some(likeId => likeId.equals(req.user._id))
 
     }))
+    
     res.status(200).json({success: true, data: updatedNotes});
   } catch (error) {
     console.log("Error in the get getNotesData controller" + error.message);
