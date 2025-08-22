@@ -20,8 +20,8 @@ app.use(cookieParser());
 
 // ✅ Allowed origins
 const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:5174"
+  "https://paper-stack-frontend.onrender.com",
+  "https://paper-stack-admin.onrender.com"
 ];
 
 // ✅ Single cors middleware
@@ -47,3 +47,4 @@ app.listen(PORT, () => {
   console.log(`Server running on port http://localhost:${PORT}`);
   dbConnection();
 });
+
