@@ -7,8 +7,9 @@ const router = express.Router()
 
 
 router.post("/add", protectedRoute, upload.single("notes"), addNotes);
-router.post("/list", getNotesData);
+router.post("/list", getNotesData, getNotesData);
 router.post("/like", protectedRoute,  updateLikes)
 
 
 export default router;
+
