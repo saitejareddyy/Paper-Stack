@@ -2,6 +2,7 @@ import { User } from "../models/uesr.model.js";
 import bcrypt from "bcryptjs";
 import { generateTokenAndSetCookie } from '../utils/generateTokenAndSetCookie.js'
 import { ENV_VARS } from "../config/env.Vars.js";
+import { Notes } from "../models/studentNotes.model.js";
 
 export async function signup(req, res) {
   try {

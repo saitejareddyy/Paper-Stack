@@ -7,7 +7,6 @@ const addSubject = async (req, res) => {
     const image_path = req.files?.image ? req.files.image[0].path : null;
     const paper_path = req.files?.paper ? req.files.paper[0].path : null;
 
-    // Parse resources safely
     let resources = [];
     if (req.body.resources) {
       try {
@@ -20,17 +19,16 @@ const addSubject = async (req, res) => {
       }
     }
 
-    // ✅ Upload image to Cloudinary
+
     const image_upload = image_path
       ? await cloudinary.uploader.upload(image_path, { resource_type: "image" })
       : null;
 
-    // ✅ Upload previous year paper as image (fixed variable name)
     const paper_upload = paper_path
       ? await cloudinary.uploader.upload(paper_path, { resource_type: "image" })
       : null;
 
-    // Check for duplicate before saving
+
     const fileFromDb = await SubjectsModel.findOne({
       name: req.body.name,
       branch: req.body.branch,
@@ -85,4 +83,28 @@ const subjectsList = async (req, res) => {
   }
 };
 
-export { addSubject, removeSubject, subjectsList };
+// const addPdf = async (req, res) => {
+//   try {
+//        const pdfFile = req.file;
+
+//     if (!pdfFile) {
+//       return res.status(401).json({ success: false, message: "pdf file not provided" });
+//     }
+
+//     const pdfUpload = await cloudinary.uploader.upload(pdfFile.path, {
+//       folder: "cloudinary-node-upload-pdf-demo",
+//       use_filename: true,
+//       unique_filename: false,
+//         resource_type: "raw"
+//     })
+
+//     console.log("Uploaded PDF URL: " , pdfUpload.url);
+//     res.status(401).json({success: true, message:"Pdf Uploaded to cloudinary"});
+
+//   } catch (error) {
+//     console.log("error from addpdf controller", error.message);
+//     res.status(500).json({success: false, message: "Internal server error"});
+//   }
+// }
+
+export { addSubject, removeSubject, subjectsList};

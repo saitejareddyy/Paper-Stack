@@ -12,10 +12,10 @@ function AllSubjects() {
   const getAllSubject = async () => {
     try {
       setIsLoading(true)
-      const response = await axios.get(`${backendUrl}/api/v1/subject/list`)
-      console.log(response.data)
-      if(response.data.success){
-        setSubjectData(response.data.subjects)
+      const res = await axios.get(`${backendUrl}/api/v1/subject/list`, { withCredentials: true })
+      console.log(res)
+      if(res.data.success){
+        setSubjectData(res.data.subjects || [])
       }
     } catch (error) {
       console.log("Error in fetching data of subjects")

@@ -9,7 +9,7 @@ export const SubjectContextProvider = ({ children }) => {
   const [branch, setBranch] = useState("ECE");
   const [user, setUser] = useState(null);
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
-
+  const [StudentsNotes, setStudentsNotes] = useState([]);
 
   const getSubjectData = async () => {
     try {
@@ -21,8 +21,21 @@ export const SubjectContextProvider = ({ children }) => {
     }
   }
 
+  const getNotesData = async () => {
+    try {
+      const response = await axios.post(`${backendUrl}/api/v1/notes/list`,{}, {withCredentials: true})
+      console.log("notes data after reload: ",response);
+      setStudentsNotes(response.data.data);
+
+    } catch (error) {
+      console.log("Error from fetching the notes data frontend" + error.message);
+    }
+  }
+
+
   useEffect(() => {
     getSubjectData();
+    getNotesData();
   }, []);
 
   const data = {
@@ -31,7 +44,8 @@ export const SubjectContextProvider = ({ children }) => {
     setBranch,
     setSubjects,
     user, setUser,
-    isCheckingAuth, setIsCheckingAuth
+    isCheckingAuth, setIsCheckingAuth,
+    StudentsNotes, setStudentsNotes
   };
 
   return (

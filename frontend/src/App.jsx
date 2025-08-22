@@ -4,15 +4,19 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import DisplayDetails from './components/DisplayDetails'
 import Navbar from './components/Navbar'
-import { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import axios from 'axios'
-import { useSubject } from './context/SubjectContext'
+import { SubjectContext} from './context/SubjectContext'
 import { Toaster } from 'react-hot-toast'
-export const backendUrl = "https://paper-stack-backend.onrender.com"
+
+
+import StudentNotes from './pages/StudentNotes'
+export const backendUrl = "http://localhost:5050"
+
 
 function App() {
 
-  const { user, setUser, isCheckingAuth, setIsCheckingAuth } = useSubject();
+  const { user, setUser, isCheckingAuth, setIsCheckingAuth } = useContext(SubjectContext);
   const navigate = useNavigate();
 
 
@@ -52,6 +56,7 @@ function App() {
         <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/subject/:id" element={user ? <DisplayDetails /> : <Navigate to="/login" />} />
+        <Route path='/notes' element={ user ? <StudentNotes /> : <Navigate to="/login" /> } />
       </Routes>
       <Toaster />
     </div>

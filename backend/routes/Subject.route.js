@@ -5,8 +5,8 @@ import { protectedRoute } from '../middleware/protectedRoute.js';
 
 const router = express.Router();
 
-router.post("/add", upload.fields([{name: "image", maxCount: 1}, {name: "paper", maxCount: 1}]), addSubject)
-router.post("/remove", removeSubject)
-router.get("/list", subjectsList)
+router.post("/add", protectedRoute, upload.fields([{name: "image", maxCount: 1}, {name: "paper", maxCount: 1}]), addSubject)
+router.post("/remove", protectedRoute, removeSubject)
+router.get("/list", protectedRoute, subjectsList)
 
 export default router;

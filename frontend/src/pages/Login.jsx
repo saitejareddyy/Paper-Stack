@@ -33,23 +33,42 @@ function AuthForm() {
                     email: formData.email,
                     password: formData.password
                 }, { withCredentials: true });
-                toast.success(response.data.message);
-                setUser(response.data.user.username);
-                navigate("/");
+
+                if (response.data.success) {
+                    toast.success(response.data.message);
+                    setUser(response.data.user.username);
+                    navigate("/");
+                } else {
+                    toast.error(response.data.message);
+                }
             } else {
                 response = await axios.post(`${backendUrl}/api/v1/auth/signup`, {
                     username: formData.name,
                     email: formData.email,
                     password: formData.password
                 }, { withCredentials: true });
-                toast.error(response.data.user.message);
-                setUser(response.data.username);
-                navigate("/");
+                if (response.data.success) {
+                    toast.success(response.data.message);
+                    setUser(response.data.user.username);
+                    navigate("/");
+                } else {
+                    toast.error(response.data.message);
+                }
+
             }
         } catch (error) {
-            console.log(`Error in ${isLogin ? "login" : "signup"} component`, error);
+            if (error.response && error.response.data && error.response.data.message) {
+                // Show backend error message
+                toast.error(error.response.data.message);
+                console.log(`Backend error: ${error.response.data.message}`);
+            } else {
+                // Generic error
+                toast.error("Something went wrong");
+                console.log(`Error in ${isLogin ? "login" : "signup"} component`, error.message);
+            }
         }
-        
+
+
         setFormData({
             name: "",
             email: "",
