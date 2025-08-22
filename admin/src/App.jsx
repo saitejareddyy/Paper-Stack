@@ -5,7 +5,7 @@ import AddSubject from './pages/AddSubject'
 import AllSubjects from './pages/AllSubjects'
 import {Toaster} from 'react-hot-toast'
 
-export const backendUrl = "http://localhost:5050"
+export const backendUrl = "https://paper-stack-backend.onrender.com"
 
 function App() {
   return (
