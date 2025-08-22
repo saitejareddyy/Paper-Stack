@@ -11,7 +11,7 @@ import { Toaster } from 'react-hot-toast'
 
 
 import StudentNotes from './pages/StudentNotes'
-export const backendUrl = "http://localhost:5050"
+export const backendUrl = "https://paper-stack-backend.onrender.com"
 
 
 function App() {
