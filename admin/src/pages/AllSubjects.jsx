@@ -12,7 +12,7 @@ function AllSubjects() {
   const getAllSubject = async () => {
     try {
       setIsLoading(true)
-      const res = await axios.get(`${backendUrl}/api/v1/subject/list`, { withCredentials: true })
+      const res = await axios.get(`${backendUrl}/api/v1/subject/list`, { withCredentials: true });
       console.log(res)
       if(res.data.success){
         setSubjectData(res.data.subjects || [])
@@ -131,5 +131,6 @@ function AllSubjects() {
     </div>
   )
 }
+
 
 export default AllSubjects
