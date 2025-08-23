@@ -18,13 +18,13 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-✅ Allowed origins
+// Allowed origins
 const allowedOrigins = [
   "https://paper-stack-frontend.onrender.com",
   "https://paper-stack-admin.onrender.com"
 ];
 
-// ✅ Single cors middleware
+// Single cors middleware
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -33,12 +33,12 @@ app.use(cors({
       callback(new Error("Not allowed by CORS"));
     }
   },
-  credentials: true, // ✅ allow cookies
+  credentials: true, //  allow cookies
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
-// ✅ Routes
+// Routes
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/subject', subjectRouter);
 app.use("/api/v1/notes", notesRouter);
@@ -47,6 +47,7 @@ app.listen(PORT, () => {
   console.log(`Server running on port http://localhost:${PORT}`);
   dbConnection();
 });
+
 
 
 
