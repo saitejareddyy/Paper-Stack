@@ -14,9 +14,7 @@ function AllSubjects() {
       setIsLoading(true)
       const res = await axios.get(`${backendUrl}/api/v1/subject/list`, { withCredentials: true })
       console.log(res)
-      if(res.data.success){
-        setSubjectData(res.data.subjects || [])
-      }
+      setSubjectData(res.data.subjects || [])
     } catch (error) {
       console.log("Error in fetching data of subjects")
       toast.error(error.message);
@@ -133,3 +131,4 @@ function AllSubjects() {
 }
 
 export default AllSubjects
+
