@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// ✅ Allowed origins
+✅ Allowed origins
 const allowedOrigins = [
   "https://paper-stack-frontend.onrender.com",
   "https://paper-stack-admin.onrender.com"
@@ -47,4 +47,9 @@ app.listen(PORT, () => {
   console.log(`Server running on port http://localhost:${PORT}`);
   dbConnection();
 });
+
+
+
+
+
 
